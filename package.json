@@ -1,0 +1,17 @@
+{
+    "name": "@electron-elm/core",
+    "version": "1.0.0",
+    "description": "Native bindings for Electron.",
+    "scripts": {},
+    "repository": "electron-elm/core",
+    "author": "Alexandre Gigliotti <alex@panosoft.com>",
+    "license": "Unlicense",
+    "dependencies": {
+        "@elm-node/npm-scripts": "^1.0.0"
+    },
+    "devDependencies": {
+        "electron": "^1.6.5",
+        "eslint": "^3.19.0",
+        "eslint-config-elm": "^1.0.0"
+    }
+}
