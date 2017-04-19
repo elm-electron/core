@@ -16,7 +16,7 @@ Renderer
     - [-] showErrorBox
     - [-] showModalErrorBox
 - Remote
-    - [ ] getCurrentWindow
+    - [x] getCurrentWindow
     - [-] getCurrentWebContents
 - app
     - [ ] getPath
