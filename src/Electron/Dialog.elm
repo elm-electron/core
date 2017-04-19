@@ -3,9 +3,6 @@ module Electron.Dialog
         ( showOpenDialog
         , showModalOpenDialog
         , defaultOptions
-          -- , showSaveDialog
-          -- , showMessageBox
-          -- , showErrorBox
         )
 
 {-| Native bindings for Electrons dialog module.

@@ -5,13 +5,15 @@
     "license": "Unlicense",
     "source-directories": [
         "src",
-        "test/Dialog"
+        "test/Dialog",
+        "test/Remote"
     ],
     "exposed-modules": [
         "Electron.BrowserWindow",
         "Electron.Dialog",
         "Electron.Error",
-        "Electron.FileFilter"
+        "Electron.FileFilter",
+        "Electron.Remote"
     ],
     "native-modules": true,
     "dependencies": {

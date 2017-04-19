@@ -8,18 +8,26 @@
 Renderer
 - Dialog
     - [x] showOpenDialog
-    - [ ] showModalOpenDialog
+    - [-] showModalOpenDialog
+    - [-] showSaveDialog
+    - [-] showModalSaveDialog
+    - [-] showMessageBox
+    - [-] showModalMessageBox
+    - [-] showErrorBox
+    - [-] showModalErrorBox
 - Remote
     - [ ] getCurrentWindow
+    - [-] getCurrentWebContents
 - app
     - [ ] getPath
-- [ ] Menu
-- [ ] MenuItem
+- [-] Menu
+- [-] MenuItem
+- [-] WebContents
 
 Main
-- [ ] BrowserWindow
-- [ ] autoUpdater
-- [ ] crashReporter
+- [-] BrowserWindow
+- [-] autoUpdater
+- [-] crashReporter
 
 Html
-- [ ] notifications
+- [-] notifications
