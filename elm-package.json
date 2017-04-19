@@ -5,10 +5,12 @@
     "license": "Unlicense",
     "source-directories": [
         "src",
+        "test/App",
         "test/Dialog",
         "test/Remote"
     ],
     "exposed-modules": [
+        "Electron.App",
         "Electron.BrowserWindow",
         "Electron.Dialog",
         "Electron.Error",

@@ -3,11 +3,13 @@
     "version": "1.0.0",
     "description": "Native bindings for Electron's core api's.",
     "scripts": {
+        "build:App": "elm-make test/App/Main.elm --output dist/App/main.js",
         "build:Dialog": "elm-make test/Dialog/Main.elm --output dist/Dialog/main.js",
         "build:Remote": "elm-make test/Remote/Main.elm --output dist/Remote/main.js",
         "postinstall": "elm-npm-postinstall",
         "preuninstall": "elm-npm-preinstall",
         "test": "npm-run-all --parallel test:* watch",
+        "test:App": "npm run build:App && electron test/App/main.js",
         "test:Dialog": "npm run build:Dialog && electron test/Dialog/main.js",
         "test:Remote": "npm run build:Remote && electron test/Remote/main.js",
         "watch": "watch \"npm-run-all build:*\" ./src ./test"
