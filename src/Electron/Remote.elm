@@ -15,7 +15,6 @@ import Electron.Error as Error exposing (Error)
 
 
 {-| -}
-getCurrentWindow : () -> Result Error BrowserWindow
+getCurrentWindow : () -> BrowserWindow
 getCurrentWindow t0 =
     LowLevel.getCurrentWindow t0
-        |> Result.mapError Error.fromValue

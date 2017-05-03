@@ -3,7 +3,6 @@ module Main exposing (main)
 import Electron.Dialog as Dialog
 import Electron.Error as Error exposing (Error)
 import Electron.Remote as Remote
-import Result.Extra as Result
 import Task
 
 
@@ -15,7 +14,7 @@ init : ( {}, Cmd Msg )
 init =
     let
         m =
-            Debug.log "Elm" "Dialog"
+            Debug.log "Dialog" ""
     in
         {}
             ! [ Task.succeed ()
@@ -43,7 +42,6 @@ init =
 
                                 browserWindow =
                                     Remote.getCurrentWindow ()
-                                        |> Result.extract (\error -> Debug.crash <| "Couldn't get current window" ++ toString error)
                             in
                                 Dialog.showModalOpenDialog browserWindow Dialog.defaultOptions
                                     |> Task.map
@@ -67,7 +65,7 @@ main =
             (\msg model ->
                 let
                     m =
-                        Debug.log "Elm" msg
+                        Debug.log "Dialog" msg
                 in
                     model ! []
             )

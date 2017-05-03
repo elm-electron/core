@@ -2,7 +2,6 @@ module Main exposing (main)
 
 import Electron.Remote as Remote
 import Electron.Error as Error exposing (Error)
-import Result.Extra as Result
 import Task
 
 
@@ -14,28 +13,22 @@ init : ( {}, Cmd Msg )
 init =
     let
         m =
-            Debug.log "Elm" "Dialog"
+            Debug.log "Remote" ""
     in
         {}
-            ! [ Ok ()
-                    |> Result.andThen
-                        (\_ ->
-                            let
-                                m =
-                                    Debug.log "Testing" "getCurrentWindow"
-                            in
-                                Remote.getCurrentWindow ()
-                                    |> Result.map
-                                        (\window ->
-                                            let
-                                                m =
-                                                    Debug.log "getCurrentWindow" "ok"
-                                            in
-                                                ()
-                                        )
-                        )
-                    |> Result.unpack Task.fail Task.succeed
-                    |> Task.attempt TestComplete
+            ! [ let
+                    m =
+                        Debug.log "Testing" "getCurrentWindow"
+                in
+                    Remote.getCurrentWindow ()
+                        |> (\window ->
+                                let
+                                    m =
+                                        Debug.log "getCurrentWindow" "ok"
+                                in
+                                    Task.succeed ()
+                           )
+                        |> Task.attempt TestComplete
               ]
 
 
@@ -47,7 +40,7 @@ main =
             (\msg model ->
                 let
                     m =
-                        Debug.log "Elm" msg
+                        Debug.log "Remote" msg
                 in
                     model ! []
             )

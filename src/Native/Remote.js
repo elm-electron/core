@@ -1,16 +1,16 @@
 const _electron_elm$core$Native_Remote = function () {
     const Ok = _elm_lang$core$Result$Ok
     const Err = _elm_lang$core$Result$Err
-    const { remote } = require("electron") // NOTE will throw if not in renderer process ...
+    const { remote } = require("electron")
+    if (!remote) throw new Error("Electron.Remote can only be used in the renderer process.")
 
 
-    // getCurrentWindow : () -> Result Decode.Value Decode.Value
+    // getCurrentWindow : () -> Decode.Value
     const getCurrentWindow = () => {
         try {
             const browserWindow = remote.getCurrentWindow()
-            if (!browserWindow) return Err(new Error("Could not get current window."))
-            return Ok(browserWindow)
-        } catch (error) { return Err(error) }
+            return browserWindow
+        } catch (error) { return console.error(error) }
     }
 
 
