@@ -4,12 +4,12 @@ const _electron_elm$core$Native_App = function () {
     const { app } = require("electron").remote || require("electron")
 
 
-    // getPath : String -> Result Decode.Value String
+    // getPath : String -> String
     const getPath = name => {
         try {
             const path = app.getPath(name)
-            return Ok(path)
-        } catch (error) { return Err(error) }
+            return path
+        } catch (error) { return console.error(error) }
     }
 
 

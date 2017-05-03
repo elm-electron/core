@@ -1,0 +1,178 @@
+[
+  {
+    "name": "Electron.Dialog",
+    "comment": " Native bindings for Electrons dialog module.\n\n@docs showOpenDialog , showModalOpenDialog , defaultOptions\n\n",
+    "aliases": [],
+    "types": [],
+    "values": [
+      {
+        "name": "defaultOptions",
+        "comment": " ",
+        "type": "Electron.Dialog.Options"
+      },
+      {
+        "name": "showModalOpenDialog",
+        "comment": " ",
+        "type": "Electron.BrowserWindow.BrowserWindow -> Electron.Dialog.Options -> Task.Task Electron.Error.Error (List String)"
+      },
+      {
+        "name": "showOpenDialog",
+        "comment": " ",
+        "type": "Electron.Dialog.Options -> Task.Task Electron.Error.Error (List String)"
+      }
+    ],
+    "generated-with-elm-version": "0.18.0"
+  },
+  {
+    "name": "Electron.Remote",
+    "comment": " Electron remote api.\n\n@docs getCurrentWindow\n\n",
+    "aliases": [],
+    "types": [],
+    "values": [
+      {
+        "name": "getCurrentWindow",
+        "comment": " ",
+        "type": "() -> Result.Result Electron.Error.Error Electron.BrowserWindow.BrowserWindow"
+      }
+    ],
+    "generated-with-elm-version": "0.18.0"
+  },
+  {
+    "name": "Electron.App",
+    "comment": " Electron app.\n\n@docs getPath , Path\n\n",
+    "aliases": [],
+    "types": [
+      {
+        "name": "Path",
+        "comment": " ",
+        "args": [],
+        "cases": [
+          [
+            "Home",
+            []
+          ],
+          [
+            "AppData",
+            []
+          ],
+          [
+            "UserData",
+            []
+          ],
+          [
+            "Temp",
+            []
+          ],
+          [
+            "Exe",
+            []
+          ],
+          [
+            "Module",
+            []
+          ],
+          [
+            "Desktop",
+            []
+          ],
+          [
+            "Documents",
+            []
+          ],
+          [
+            "Downloads",
+            []
+          ],
+          [
+            "Music",
+            []
+          ],
+          [
+            "Pictures",
+            []
+          ],
+          [
+            "Videos",
+            []
+          ],
+          [
+            "PepperFlashSystemPlugin",
+            []
+          ]
+        ]
+      }
+    ],
+    "values": [
+      {
+        "name": "getPath",
+        "comment": " ",
+        "type": "Electron.App.Path -> Result.Result Electron.Error.Error String"
+      }
+    ],
+    "generated-with-elm-version": "0.18.0"
+  },
+  {
+    "name": "Electron.FileFilter",
+    "comment": " Electron FileFilter.\n\n@docs FileFilter , encodeValue\n\n",
+    "aliases": [
+      {
+        "name": "FileFilter",
+        "comment": " ",
+        "args": [],
+        "type": "{ name : String, extensions : List String }"
+      }
+    ],
+    "types": [],
+    "values": [
+      {
+        "name": "encodeValue",
+        "comment": " ",
+        "type": "Electron.FileFilter.FileFilter -> Json.Encode.Value"
+      }
+    ],
+    "generated-with-elm-version": "0.18.0"
+  },
+  {
+    "name": "Electron.BrowserWindow",
+    "comment": " Native binding to Electron BrowserWindow.\n\n@docs BrowserWindow\n\n",
+    "aliases": [
+      {
+        "name": "BrowserWindow",
+        "comment": " ",
+        "args": [],
+        "type": "Json.Decode.Value"
+      }
+    ],
+    "types": [],
+    "values": [],
+    "generated-with-elm-version": "0.18.0"
+  },
+  {
+    "name": "Electron.Error",
+    "comment": " Javascript Error.\n\n@docs Error , fromValue\n\n",
+    "aliases": [],
+    "types": [
+      {
+        "name": "Error",
+        "comment": " ",
+        "args": [],
+        "cases": [
+          [
+            "Error",
+            [
+              "String"
+            ]
+          ]
+        ]
+      }
+    ],
+    "values": [
+      {
+        "name": "fromValue",
+        "comment": " ",
+        "type": "Json.Decode.Value -> Electron.Error.Error"
+      }
+    ],
+    "generated-with-elm-version": "0.18.0"
+  }
+]

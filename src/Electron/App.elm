@@ -38,7 +38,6 @@ pathToString =
 
 
 {-| -}
-getPath : Path -> Result Error String
+getPath : Path -> String
 getPath path =
     LowLevel.getPath (pathToString path)
-        |> Result.mapError Error.fromValue

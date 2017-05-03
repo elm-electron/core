@@ -5,6 +5,11 @@
 
 # todo
 
+- electron native bindings
+    look for apis we may use
+    open source
+
+
 Renderer
 - Dialog
     - [x] showOpenDialog
@@ -19,7 +24,7 @@ Renderer
     - [x] getCurrentWindow
     - [-] getCurrentWebContents
 - app
-    - [ ] getPath
+    - [x] getPath
 - [-] Menu
 - [-] MenuItem
 - [-] WebContents

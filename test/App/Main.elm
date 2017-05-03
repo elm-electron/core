@@ -2,7 +2,6 @@ module Main exposing (main)
 
 import Electron.App as App
 import Electron.Error as Error exposing (Error)
-import Result.Extra as Result
 import Task
 
 
@@ -14,28 +13,22 @@ init : ( {}, Cmd Msg )
 init =
     let
         m =
-            Debug.log "Elm" "App"
+            Debug.log "App" ""
     in
         {}
-            ! [ Ok ()
-                    |> Result.andThen
-                        (\_ ->
-                            let
-                                m =
-                                    Debug.log "Testing" "getPath"
-                            in
-                                App.getPath App.UserData
-                                    |> Result.map
-                                        (\path ->
-                                            let
-                                                m =
-                                                    Debug.log "getPath" path
-                                            in
-                                                ()
-                                        )
-                        )
-                    |> Result.unpack Task.fail Task.succeed
-                    |> Task.attempt TestComplete
+            ! [ let
+                    m =
+                        Debug.log "Testing" "getPath"
+                in
+                    App.getPath App.UserData
+                        |> (\path ->
+                                let
+                                    m =
+                                        Debug.log "getPath" path
+                                in
+                                    Task.succeed ()
+                           )
+                        |> Task.attempt TestComplete
               ]
 
 
@@ -47,7 +40,7 @@ main =
             (\msg model ->
                 let
                     m =
-                        Debug.log "Elm" msg
+                        Debug.log "App" msg
                 in
                     model ! []
             )
