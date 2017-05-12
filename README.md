@@ -1,6 +1,16 @@
-# Core
+# Electron core
 
 > Native bindings for Electron's core api's.
+
+
+## install
+
+
+```
+npm install electron-elm/core
+```
+
+_This package uses [elm-node/npm-scripts](https://github.com/elm-node/npm-scripts) for installation. Install them in your package for a better install experience._
 
 
 # todo
@@ -33,6 +43,3 @@ Main
 - [-] BrowserWindow
 - [-] autoUpdater
 - [-] crashReporter
-
-Html
-- [-] notifications
