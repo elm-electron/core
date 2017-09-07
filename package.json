@@ -6,8 +6,6 @@
     "build:App": "elm-make test/App/Main.elm --output dist/App/main.js",
     "build:Dialog": "elm-make test/Dialog/Main.elm --output dist/Dialog/main.js",
     "build:Remote": "elm-make test/Remote/Main.elm --output dist/Remote/main.js",
-    "postinstall": "elm-npm-postinstall",
-    "preuninstall": "elm-npm-preuninstall",
     "test": "npm-run-all --parallel test:* watch",
     "test:App": "npm run build:App && electron test/App/main.js",
     "test:Dialog": "npm run build:Dialog && electron test/Dialog/main.js",
@@ -17,9 +15,7 @@
   "repository": "electron-elm/core",
   "author": "Alexandre Gigliotti <alex@panosoft.com>",
   "license": "Unlicense",
-  "dependencies": {
-    "@elm-node/npm-scripts": "^1.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "electron": "^1.6.5",
     "eslint": "^3.19.0",
