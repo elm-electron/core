@@ -1,6 +1,6 @@
 {
   "name": "@electron-elm/core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Native bindings for Electron's core api's.",
   "scripts": {
     "build:App": "elm-make test/App/Main.elm --output dist/App/main.js",
