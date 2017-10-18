@@ -5,11 +5,12 @@
 
 ## Install
 
-```
+```sh
 grove install elm-electron/core
 ```
 
 _Note: [Grove](https://github.com/panosoft/elm-grove), an advanced package manager for Elm, can be found [here](https://github.com/panosoft/elm-grove)._
+
 
 ## Documentation
 
