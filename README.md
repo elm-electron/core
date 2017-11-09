@@ -1,6 +1,12 @@
 # Electron core
 
-> Native bindings for Electron's core api's.
+> Support for Electron's runtime environment.
+
+Electron: `v1.8.x`
+
+In accordance with Elm best practices, this package strives for:
+- No runtime exceptions
+- Enforced semantic versioning
 
 
 ## Install
@@ -14,4 +20,4 @@ _Note: [Grove](https://github.com/panosoft/elm-grove) is an advanced package man
 
 ## Documentation
 
-Can be found in the [./docs](./docs) directory.
+Complete api documentation can be found in the [./docs](./docs) directory.
