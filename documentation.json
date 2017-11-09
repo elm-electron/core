@@ -32,7 +32,7 @@
       {
         "name": "getCurrentWindow",
         "comment": " ",
-        "type": "() -> Result.Result Electron.Error.Error Electron.BrowserWindow.BrowserWindow"
+        "type": "() -> Electron.BrowserWindow.BrowserWindow"
       }
     ],
     "generated-with-elm-version": "0.18.0"
@@ -106,7 +106,7 @@
       {
         "name": "getPath",
         "comment": " ",
-        "type": "Electron.App.Path -> Result.Result Electron.Error.Error String"
+        "type": "Electron.App.Path -> String"
       }
     ],
     "generated-with-elm-version": "0.18.0"
@@ -130,21 +130,6 @@
         "type": "Electron.FileFilter.FileFilter -> Json.Encode.Value"
       }
     ],
-    "generated-with-elm-version": "0.18.0"
-  },
-  {
-    "name": "Electron.BrowserWindow",
-    "comment": " Native binding to Electron BrowserWindow.\n\n@docs BrowserWindow\n\n",
-    "aliases": [
-      {
-        "name": "BrowserWindow",
-        "comment": " ",
-        "args": [],
-        "type": "Json.Decode.Value"
-      }
-    ],
-    "types": [],
-    "values": [],
     "generated-with-elm-version": "0.18.0"
   },
   {
@@ -173,6 +158,21 @@
         "type": "Json.Decode.Value -> Electron.Error.Error"
       }
     ],
+    "generated-with-elm-version": "0.18.0"
+  },
+  {
+    "name": "Electron.BrowserWindow",
+    "comment": " Native binding to Electron BrowserWindow.\n\n@docs BrowserWindow\n\n",
+    "aliases": [
+      {
+        "name": "BrowserWindow",
+        "comment": " ",
+        "args": [],
+        "type": "Json.Decode.Value"
+      }
+    ],
+    "types": [],
+    "values": [],
     "generated-with-elm-version": "0.18.0"
   }
 ]
