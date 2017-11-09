@@ -1,4 +1,4 @@
-const _electron_elm$core$Native_Dialog = function () {
+const _elm_electron$core$Native_Dialog = function () {
     const { nativeBinding, succeed, fail } = _elm_lang$core$Native_Scheduler
     const { dialog } = require("electron").remote || require("electron")
 

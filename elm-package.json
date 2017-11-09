@@ -1,7 +1,7 @@
 {
     "version": "1.0.1",
     "summary": "",
-    "repository": "https://github.com/electron-elm/core.git",
+    "repository": "https://github.com/elm-electron/core.git",
     "license": "Unlicense",
     "source-directories": [
         "src",

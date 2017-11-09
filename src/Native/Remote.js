@@ -1,4 +1,4 @@
-const _electron_elm$core$Native_Remote = function () {
+const _elm_electron$core$Native_Remote = function () {
     const Ok = _elm_lang$core$Result$Ok
     const Err = _elm_lang$core$Result$Err
     const { remote } = require("electron")

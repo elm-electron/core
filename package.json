@@ -1,5 +1,5 @@
 {
-  "name": "@electron-elm/core",
+  "name": "@elm-electron/core",
   "version": "1.0.1",
   "description": "Native bindings for Electron's core api's.",
   "scripts": {
